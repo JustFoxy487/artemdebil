@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Артём и наука</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    td, th {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      background: #ecf0f1;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+    .chart {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Артём: уникальный случай в когнитивных науках</h1>
+    <p>Сравнительный анализ между человеком и приматами</p>
+  </header>
+  <main>
+    <section>
+      <h2>Гипотеза</h2>
+      <p>Учёные полагают, что Артём может быть особым звеном между современным человеком и его далекими предками. Не исключено, что он достиг баланса между минимальными усилиями и выживанием в социуме.</p>
+    </section>
+
+    <section>
+      <h2>Методология</h2>
+      <ul>
+        <li>Тест на внимание: не прошёл — отвлёкся на мемы</li>
+        <li>Тест на реакцию: слишком долго смеялся</li>
+        <li>Математика: 2+2 = "иногда 5"</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Сравнение с приматами</h2>
+      <table>
+        <tr>
+          <th>Критерий</th>
+          <th>Артём</th>
+          <th>Шимпанзе</th>
+          <th>Капуцин</th>
+        </tr>
+        <tr>
+          <td>Решение задач</td>
+          <td>Иногда</td>
+          <td>Да</td>
+          <td>Да</td>
+        </tr>
+        <tr>
+          <td>Память</td>
+          <td>Что?</td>
+          <td>Хорошая</td>
+          <td>Средняя</td>
+        </tr>
+        <tr>
+          <td>Использование инструментов</td>
+          <td>Ложка</td>
+          <td>Палка</td>
+          <td>Камень</td>
+        </tr>
+      </table>
+      <p>Источники:
+        <ul>
+          <li><a href="https://ru.wikipedia.org/wiki/Интеллект_приматов" target="_blank">Интеллект приматов (вики)</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Ayumu_the_chimpanzee" target="_blank">Ayumu — шимпанзе с суперпамятью</a></li>
+        </ul>
+      </p>
+    </section>
+
+    <section>
+      <h2>Социальный статус</h2>
+      <div class="chart">
+        <canvas id="chart"></canvas>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Сайт создан в научно-юмористических целях. Артём — краш и душа компании ❤️
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('chart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Одобрено девушкой', 'Одобрено мамой', 'Сам решил'],
+        datasets: [{
+          label: 'Решения Артёма',
+          data: [70, 20, 10],
+          backgroundColor: ['#3498db', '#9b59b6', '#2ecc71']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
